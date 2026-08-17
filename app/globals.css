@@ -1,0 +1,150 @@
+:root {
+  --font-size: 1.05em;
+  --line-height: 2;
+  --kkm-width: 38em;
+}
+
+html[data-theme="light"] {
+  --bg: #fdfdfb;
+  --fg: #222;
+  --border: #ddd;
+  --btn-bg: #fff;
+  --muted: #666;
+}
+html[data-theme="sepia"] {
+  --bg: #f4ecd8;
+  --fg: #3b2f1c;
+  --border: #dcd0b4;
+  --btn-bg: #fbf4e4;
+  --muted: #7a6a4a;
+}
+html[data-theme="dark"] {
+  --bg: #1b1b1b;
+  --fg: #ddd;
+  --border: #444;
+  --btn-bg: #2a2a2a;
+  --muted: #999;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+a {
+  color: inherit;
+}
+
+/* ツールバー */
+.kkm-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1em;
+  align-items: center;
+  padding: 0.6em 1em;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 0.8em;
+}
+.kkm-toolbar-brand {
+  font-weight: bold;
+  margin-right: 0.5em;
+  text-decoration: none;
+}
+.kkm-toolbar-link {
+  text-decoration: underline;
+}
+.kkm-group {
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+}
+.kkm-toolbar button {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--btn-bg);
+  color: var(--fg);
+  border-radius: 4px;
+  padding: 0.3em 0.6em;
+  font-size: 1em;
+}
+.kkm-toolbar button.kkm-active {
+  border-color: currentColor;
+  font-weight: bold;
+}
+
+/* 本文リーダー */
+.kkm-reader {
+  max-width: var(--kkm-width);
+  margin: 2em auto;
+  padding: 0 1.2em 4em;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+.kkm-reader h1 {
+  font-size: 1.3em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5em;
+}
+.kkm-reader p {
+  margin: 0 0 0.2em 0;
+}
+.kkm-reader rt {
+  font-size: 0.6em;
+}
+.kkm-reader ol {
+  padding-left: 1.5em;
+}
+.kkm-reader li {
+  margin-bottom: 0.5em;
+}
+.kkm-nav {
+  margin: 2.5em 0 1em;
+  padding-top: 1.5em;
+  border-top: 1px dashed var(--border);
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+/* トップページのアップロードUI */
+.upload-drop {
+  margin-top: 1.5em;
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 3em 1em;
+  text-align: center;
+  cursor: pointer;
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", sans-serif;
+  color: var(--muted);
+}
+.upload-drop:hover {
+  border-color: currentColor;
+}
+.upload-status {
+  margin-top: 1em;
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 0.9em;
+}
+.upload-error {
+  color: #c0392b;
+}
