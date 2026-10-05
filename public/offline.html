@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>オフラインです - カクヨムリーダー</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fdfdfb;
+    color: #222;
+    font-family: -apple-system, "Hiragino Kaku Gothic ProN", sans-serif;
+    text-align: center;
+    padding: 2em;
+  }
+  .box { max-width: 24em; }
+  h1 { font-size: 1.2em; margin-bottom: 0.5em; }
+  p { line-height: 1.8; color: #555; }
+  button {
+    margin-top: 1.5em;
+    padding: 0.6em 1.4em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 1em;
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>オフラインです</h1>
+    <p>
+      このページはまだ一度もオンラインで開いたことがないため、
+      オフラインでは表示できません。<br>
+      ネットワークに接続してから、一度そのページを開いてみてください。
+    </p>
+    <button onclick="location.reload()">再読み込み</button>
+  </div>
+</body>
+</html>
