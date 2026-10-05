@@ -1,9 +1,22 @@
 import "./globals.css";
 import Toolbar from "../components/Toolbar";
+import ServiceWorkerRegister from "../components/ServiceWorkerRegister";
 
 export const metadata = {
   title: "カクヨムリーダー",
   description: "アップロードした小説zipをブラウザだけで読めるリーダーサイト",
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/icons/icon-192.png",
+  },
+};
+
+export const viewport = {
+  themeColor: "#3b2f1c",
 };
 
 // テーマ適用前の白画面フラッシュを防ぐため、hydration前に即実行する
@@ -29,6 +42,7 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body>
+        <ServiceWorkerRegister />
         <Toolbar />
         <main className="kkm-reader">{children}</main>
       </body>
