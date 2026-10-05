@@ -32,7 +32,7 @@ export default function WorkPage() {
       <ol>
         {work.episodes.map((ep) => (
           <li key={ep.num}>
-            <Link href={`/read/${ep.num}`}>{ep.title}</Link>
+            <Link href={`/read?num=${ep.num}`}>{ep.title}</Link>
           </li>
         ))}
       </ol>
