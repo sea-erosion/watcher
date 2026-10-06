@@ -10,7 +10,7 @@
 //    まだ一度も開いていないページ(例: 一度も開いていない話)はオフラインでは
 //    表示できず、代わりにオフライン案内ページを表示する。
 
-const CACHE_VERSION = "v2";
+const CACHE_VERSION = "v3";
 const CACHE_NAME = `kkm-reader-${CACHE_VERSION}`;
 const OFFLINE_URL = "/offline.html";
 
@@ -24,6 +24,9 @@ const PRECACHE_URLS = [
   "/read",
   "/manifest.json",
   "/offline.html",
+  "/favicon.ico",
+  "/icons/favicon-16.png",
+  "/icons/favicon-32.png",
   "/icons/icon-192.png",
   "/icons/icon-512.png",
 ];
