@@ -7,7 +7,13 @@ export const metadata = {
   description: "アップロードした小説zipをブラウザだけで読めるリーダーサイト",
   manifest: "/manifest.json",
   icons: {
+    // ブラウザタブ用のfavicon。16/32pxという極小サイズでは画数の多い字が
+    // 潰れて読めなくなるため、ホーム画面アイコン(icon-192/512, 「読」の字)とは
+    // あえて別デザインにし、画数の少ない「本」の字を使っている。
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icons/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/favicon-32.png", sizes: "32x32", type: "image/png" },
       { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
